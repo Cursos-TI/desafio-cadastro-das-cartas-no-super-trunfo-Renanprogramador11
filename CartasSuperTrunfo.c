@@ -8,8 +8,8 @@
 
 int main() {
        
-    int  turistico , codigo , area ;
-    float pib , populacao ;
+    int   codigo , area ;
+    float pib , populacao, turistico ;
     char estado [50] , cidade [50] , carta [50] ;
 
     printf("Digite sua carta 1 : \n");
@@ -28,15 +28,41 @@ int main() {
     scanf("%f", pib );
 
     printf("Digite os pontos turísticos : \n" );
+    scanf("%f", turistico );
+
+    printf("Digite sua carta 2 : \n");
+    scanf("%s", &carta);
+
+    printf("Digite o seu estado : \n");
+    scanf("%s", &estado);
+
+    printf("Digite a sua cidade : \n" );
+    scanf("%s", cidade);
+
+    printf("Digite a população : \n" );
+    scanf ("%d" , populacao );
+
+    printf("Digite o PIB : \n" );
+    scanf("%f", pib );
+
+    printf("Digite os pontos turísticos : \n" );
     scanf("%d", turistico );
 
-    printf ("  carta  : %s \n estado : %s \n ", carta , estado );
+    printf ("\ncarta  1 : %s \n estado : %s \n ", carta , estado );
     printf ("codigo : %s \n " , estado );
     printf ("nome da cidade : %s \n " , cidade );
     printf ("População : %d \n " , populacao );
     printf ("Área   : %f  \n " , area );
     printf ("PIB    : %f \n " , pib );
-    printf ("Números de Pontos Túristicos : %d " , turistico );
+    printf ("Números de Pontos Túristicos : %f \n " , turistico );
+
+    printf (" \n carta  2 : %s \n estado : %s \n ", carta , estado );
+    printf (" codigo : %s \n " , estado );
+    printf (" nome da cidade : %s \n " , cidade );
+    printf (" População : %d \n " , populacao );
+    printf (" Área   : %f  \n " , area );
+    printf (" PIB    : %f \n " , pib );
+    printf (" Números de Pontos Túristicos : %d " , turistico );
 
    
 
