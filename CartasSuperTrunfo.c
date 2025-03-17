@@ -11,6 +11,10 @@ int main() {
     int   codigo , area ;
     float pib , populacao, turistico ;
     char estado [50] , cidade [50] , carta [50] ;
+    float densidade , percapita ;
+
+     printf("**** JOGO SUPER TRUNFO ****  \n ");
+
 
     printf("Digite sua carta 1 : \n");
     scanf("%s", &carta);
@@ -19,16 +23,16 @@ int main() {
     scanf("%s", &estado);
 
     printf("Digite a sua cidade : \n" );
-    scanf("%s", cidade);
+    scanf("%s", &cidade);
 
     printf("Digite a população : \n" );
-    scanf ("%d" , populacao );
+    scanf ("%f" ,&populacao );
 
     printf("Digite o PIB : \n" );
-    scanf("%f", pib );
+    scanf("%f", &pib );
 
     printf("Digite os pontos turísticos : \n" );
-    scanf("%f", turistico );
+    scanf("%f", &turistico );
 
     printf("Digite sua carta 2 : \n");
     scanf("%s", &carta);
@@ -37,32 +41,42 @@ int main() {
     scanf("%s", &estado);
 
     printf("Digite a sua cidade : \n" );
-    scanf("%s", cidade);
+    scanf("%s", &cidade);
 
     printf("Digite a população : \n" );
-    scanf ("%d" , populacao );
+    scanf ("%f" , &populacao );
 
     printf("Digite o PIB : \n" );
-    scanf("%f", pib );
+    scanf("%f", &pib );
 
     printf("Digite os pontos turísticos : \n" );
-    scanf("%d", turistico );
+    scanf("%f", &turistico );
+
+    densidade = (float ) (populacao / area ) ;
+    percapita = (float) ( pib / populacao) ;
 
     printf ("\ncarta  1 : %s \n estado : %s \n ", carta , estado );
     printf ("codigo : %s \n " , estado );
     printf ("nome da cidade : %s \n " , cidade );
-    printf ("População : %d \n " , populacao );
-    printf ("Área   : %f  \n " , area );
-    printf ("PIB    : %f \n " , pib );
+    printf ("População : %.5f  \n " , populacao );
+    printf ("Área   : %.5d  \n " , area );
+    printf ("PIB    : %.5f \n " , pib );
     printf ("Números de Pontos Túristicos : %f \n " , turistico );
+    printf ("Dencidade Populacional : %.4f \n " , densidade );
+    printf ("Pib por capita  : %.4f \n " , percapita );
+
+    densidade = (float ) (populacao / area ) ;
+    percapita = (float) ( pib / populacao) ;
 
     printf (" \n carta  2 : %s \n estado : %s \n ", carta , estado );
     printf (" codigo : %s \n " , estado );
     printf (" nome da cidade : %s \n " , cidade );
-    printf (" População : %d \n " , populacao );
-    printf (" Área   : %f  \n " , area );
-    printf (" PIB    : %f \n " , pib );
-    printf (" Números de Pontos Túristicos : %d " , turistico );
+    printf (" População : %.5f \n " , populacao );
+    printf (" Área   : %.5d \n " , area );
+    printf (" PIB    : %.5f \n " , pib );
+    printf (" Números de Pontos Túristicos : %f " , turistico );
+    printf (" Dencidade Populacional : %.4f \n " , densidade );
+    printf (" Pib por capita  : %.4f \n " , percapita );
 
    
 
