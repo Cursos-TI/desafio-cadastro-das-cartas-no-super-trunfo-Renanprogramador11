@@ -8,16 +8,22 @@
 
 int main() {
        
-    int   codigo , area ;
-    float pib , populacao, turistico ;
-    char estado [50] , cidade [50] , carta [50] ;
+    int   codigo , carta = 01 ;
+    float pib ,area , populacao, turistico ;
+    char estado [50] , cidade [50]  ;
     float densidade , percapita ;
+
+    int  codigo1 , carta1 = 02 ;
+    float pib1 , area1 , populacao1, turistico1 ;
+    char estado1 [50] , cidade1 [50]  ;
+    float densidade1 , percapita1 ;
 
      printf("**** JOGO SUPER TRUNFO ****  \n ");
 
+     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    printf("Digite sua carta 1 : \n");
-    scanf("%s", &carta);
+
+    printf("    Carta 1 : \n") ;
 
     printf("Digite o seu estado : \n");
     scanf("%s", &estado);
@@ -28,58 +34,74 @@ int main() {
     printf("Digite a população : \n" );
     scanf ("%f" ,&populacao );
 
+    printf("Digite a Area : \n" );
+    scanf ("%f" ,&area );
+
     printf("Digite o PIB : \n" );
     scanf("%f", &pib );
 
     printf("Digite os pontos turísticos : \n" );
     scanf("%f", &turistico );
 
-    printf("Digite sua carta 2 : \n");
-    scanf("%s", &carta);
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
+    printf(" Carta 2 : \n");
+    
     printf("Digite o seu estado : \n");
-    scanf("%s", &estado);
+    scanf("%s", &estado1);
 
     printf("Digite a sua cidade : \n" );
-    scanf("%s", &cidade);
+    scanf("%s", &cidade1);
 
-    printf("Digite a população : \n" );
-    scanf ("%f" , &populacao );
+    printf("Digite a Populaçao : \n" );
+    scanf ("%f" , &populacao1 );
+
+    printf("Digite a area : \n" );
+    scanf ("%f" ,&area1 );
 
     printf("Digite o PIB : \n" );
-    scanf("%f", &pib );
+    scanf("%f", &pib1 );
 
     printf("Digite os pontos turísticos : \n" );
-    scanf("%f", &turistico );
+    scanf("%f", &turistico1 );
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
     densidade = (float ) (populacao / area ) ;
     percapita = (float) ( pib / populacao) ;
 
-    printf ("\ncarta  1 : %s \n estado : %s \n ", carta , estado );
-    printf ("codigo : %s \n " , estado );
-    printf ("nome da cidade : %s \n " , cidade );
-    printf ("População : %.5f  \n " , populacao );
-    printf ("Área   : %.5d  \n " , area );
-    printf ("PIB    : %.5f \n " , pib );
-    printf ("Números de Pontos Túristicos : %f \n " , turistico );
-    printf ("Dencidade Populacional : %.4f \n " , densidade );
-    printf ("Pib por capita  : %.4f \n " , percapita );
+    printf ("Carta  1 : %d \n " , carta );
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
+    printf ("Estado : %s \n " , estado );
+    printf ("Codigo :  \n " , carta + estado );
+    printf ("Nome da cidade : %s \n " , cidade );
+    printf ("População : %.3f  \n " , populacao );
+    printf ("Área   : %.3f Km \n " , area );
+    printf ("PIB    : %.3f \n " , pib );
+    printf ("Números de Pontos Túristicos : %.0f \n " , turistico );
+    printf ("Dencidade Populacional : %.3f \n " , densidade );
+    printf ("Pib por capita  : $ %.3f \n " , percapita );
 
-    densidade = (float ) (populacao / area ) ;
-    percapita = (float) ( pib / populacao) ;
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    printf (" \n carta  2 : %s \n estado : %s \n ", carta , estado );
-    printf (" codigo : %s \n " , estado );
-    printf (" nome da cidade : %s \n " , cidade );
-    printf (" População : %.5f \n " , populacao );
-    printf (" Área   : %.5d \n " , area );
-    printf (" PIB    : %.5f \n " , pib );
-    printf (" Números de Pontos Túristicos : %f " , turistico );
-    printf (" Dencidade Populacional : %.4f \n " , densidade );
-    printf (" Pib por capita  : %.4f \n " , percapita );
+    densidade1 = (float ) (populacao1 / area1 ) ;
+    percapita1 = (float) ( pib1 / populacao1) ;
+   
+    printf (" Carta  2 : \n " , carta1);
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
+    printf ("Estado : %s \n " , estado );
+    printf ("Codigo : %d \n " , carta1 + estado1 );
+    printf ("Nome da cidade : %s \n " , cidade1 );
+    printf ("População : %.3f \n " , populacao1 );
+    printf ("Área   : %.3f Km\n " , area1 );
+    printf ("PIB    : %.3f \n " , pib1 );
+    printf ("Números de Pontos Túristicos : %.0f \n " , turistico1 );
+    printf ("Dencidade Populacional : %.3f Km \n " , densidade1 );
+    printf ("Pib por capita  : $ %.3f \n " , percapita1 );
 
    
 
 return 0;
 
 }
+
