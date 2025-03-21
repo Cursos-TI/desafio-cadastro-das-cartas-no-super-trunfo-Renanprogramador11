@@ -25,7 +25,7 @@ int main() {
      printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
 
-    printf("    Carta 1 : \n") ;
+    printf("  Carta 1 : \n  ") ;
 
     printf("Digite o seu estado : \n");
     scanf("%s", &estado);
@@ -72,7 +72,7 @@ int main() {
     densidade = (float ) (populacao / area ) ;
     percapita = (float) ( pib / populacao) ;
 
-    printf ("Carta  1 : %d \n " , carta );
+    printf ("Carta  1 : \n " , carta );
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
     printf ("Estado : %s \n " , estado );
     printf ("Codigo :  \n " , carta + estado );
@@ -103,14 +103,30 @@ int main() {
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    superpoder = (int) populacao + area + turistico + pib , (densidade / area );
+    superpoder = (int) populacao + area + turistico + pib , ( densidade /densidade );
 
     printf("Super poder carta 1 : %d \n " , superpoder );
 
-    superpoder1 = (int) populacao1 + area1 + turistico1 + pib1 , (densidade1 / area1 );
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    printf("Super poder carta 1 : %d \n " , superpoder1 );
+    superpoder1 = (int) populacao1 + area1 + turistico1 + pib1 , (  densidade1 /densidade1 );
 
+    printf("Super poder carta 2 : %d \n " , superpoder1 );
+   
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
+
+    printf (" Comparação de cartas : \n " ) ;
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
+
+    printf (" População ; %d \n " , populacao > populacao1  );
+    printf (" Area  : %d  \n  " , (int) area > area1  );
+    printf ("Pib  : %d  \n " , (int) pib > pib1 );
+    printf (" Pontso Turisticos : %d \n " , (int) turistico > turistico1  );
+    printf (" Desidade Populacional : %d \n " , (int) densidade> densidade1  );
+    printf (" Pib per Capita  : %d   \n " , (int ) percapita > percapita1 );
+    printf (" Super Poder : %d   \n " , (int) superpoder > superpoder1  );
+   
 
 return 0;
 
