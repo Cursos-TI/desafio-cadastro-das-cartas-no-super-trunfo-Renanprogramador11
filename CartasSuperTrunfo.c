@@ -18,6 +18,8 @@ int main() {
     char estado1 [50] , cidade1 [50]  ;
     float densidade1 , percapita1 ;
 
+    float superpoder , superpoder1 ;
+
      printf("**** JOGO SUPER TRUNFO ****  \n ");
 
      printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
@@ -99,7 +101,16 @@ int main() {
     printf ("Dencidade Populacional : %.3f Km \n " , densidade1 );
     printf ("Pib por capita  : $ %.3f \n " , percapita1 );
 
-   
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
+
+    superpoder = (int) populacao + area + turistico + pib , (densidade / area );
+
+    printf("Super poder carta 1 : %d \n " , superpoder );
+
+    superpoder1 = (int) populacao1 + area1 + turistico1 + pib1 , (densidade1 / area1 );
+
+    printf("Super poder carta 1 : %d \n " , superpoder1 );
+
 
 return 0;
 
