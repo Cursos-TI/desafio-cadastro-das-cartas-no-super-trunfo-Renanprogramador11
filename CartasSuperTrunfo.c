@@ -10,12 +10,12 @@ int main() {
        
     int   codigo , carta = 01 ;
     float pib ,area , populacao, turistico ;
-    char estado [50] , cidade [50]  ;
+    char estado [100] , cidade [100]  ;
     float densidade , percapita ;
 
     int  codigo1 , carta1 = 02 ;
     float pib1 , area1 , populacao1, turistico1 ;
-    char estado1 [50] , cidade1 [50]  ;
+    char estado1 [100] , cidade1 [100]  ;
     float densidade1 , percapita1 ;
 
     float superpoder , superpoder1 ;
@@ -119,16 +119,20 @@ int main() {
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    printf (" População ; %d \n " , populacao > populacao1  );
-    printf (" Area  : %d  \n  " , (int) area > area1  );
-    printf ("Pib  : %d  \n " , (int) pib > pib1 );
-    printf (" Pontso Turisticos : %d \n " , (int) turistico > turistico1  );
-    printf (" Desidade Populacional : %d \n " , (int) densidade> densidade1  );
-    printf (" Pib per Capita  : %d   \n " , (int ) percapita > percapita1 );
-    printf (" Super Poder : %d   \n " , (int) superpoder > superpoder1  );
+
+    printf (" carta 1 - %s : %.3f \n " , estado , populacao);
+    printf (" carta 2 - %s : %.3f \n " , estado1 , populacao1);
+
+     if (populacao > populacao1){
+        printf ("carta 1 - (%s) venceu " , estado  ) ;
+    } else {
+        printf ("Carta 2 - (%s) venceu " , estado1 );
+    }
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
+
    
 
 return 0;
 
 }
-
