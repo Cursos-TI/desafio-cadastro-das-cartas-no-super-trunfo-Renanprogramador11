@@ -8,7 +8,7 @@
 
 int main() {
        
-    int   codigo , carta = 01 ;
+    int   codigo , carta = 01 ;                         // declaração de toda as variaveis do codigo 
     float pib ,area , populacao, turistico ;
     char estado [100] , cidade [100]  ;
     float densidade , percapita ;
@@ -25,7 +25,7 @@ int main() {
      printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
 
-    printf("  Carta 1 : \n  ") ;
+    printf("  Carta 1 : \n  ") ;          // Entrada de dados com printf e leitura de dados com o scanf .
 
     printf("Digite o seu estado : \n");
     scanf("%s", &estado);
@@ -72,7 +72,7 @@ int main() {
     densidade = (float ) (populacao / area ) ;
     percapita = (float) ( pib / populacao) ;
 
-    printf ("Carta  1 : \n " , carta );
+    printf ("Carta  1 : \n " , carta );          // Saida de dados para o usuario do jo com o printf . 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
     printf ("Estado : %s \n " , estado );
     printf ("Codigo :  \n " , carta + estado );
@@ -86,7 +86,7 @@ int main() {
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    densidade1 = (float ) (populacao1 / area1 ) ;
+    densidade1 = (float ) (populacao1 / area1 ) ;     // Calculo da dencidade 
     percapita1 = (float) ( pib1 / populacao1) ;
    
     printf (" Carta  2 : \n " , carta1);
@@ -103,7 +103,7 @@ int main() {
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    superpoder = (int) populacao + area + turistico + pib , ( densidade /densidade );
+    superpoder = (int) populacao + area + turistico + pib , ( densidade /densidade );   // calculo do  super poder usando a conversao direta 
 
     printf("Super poder carta 1 : %d \n " , superpoder );
 
@@ -120,19 +120,86 @@ int main() {
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
 
-    printf (" carta 1 - %s : %.3f \n " , estado , populacao);
-    printf (" carta 2 - %s : %.3f \n " , estado1 , populacao1);
+    printf (" carta 1 - %s : População : %.3f \n " , estado , populacao);         // comprarçao de todas as cartas diretamente no codigo sem escolha do usuarios
+    printf (" carta 2 - %s : População : %.3f \n " , estado1 , populacao1);
 
      if (populacao > populacao1){
-        printf ("carta 1 - (%s) venceu " , estado  ) ;
+        printf ("carta 1 - (%s) venceu \n " , estado  ) ;
     } else {
-        printf ("Carta 2 - (%s) venceu " , estado1 );
+        printf (" Carta 2 - (%s) venceu \n " , estado1 );
     }
 
-    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+    
+
+     printf (" carta 1 - %s : Area : %.3f \n " , estado , area);
+    printf (" carta 2 - %s  : Area : %.3f \n " , estado1 , area1);
+
+    
+    if (area > area1){
+        printf ("carta 1 - (%s) venceu \n " , estado  ) ;
+    } else {
+        printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    }
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+
+    printf (" carta 1 - %s  : Pib : %.3f \n " , estado , pib);
+    printf (" carta 2 - %s  : Pib : %.3f \n " , estado1 , pib1);
+
+    if (pib > pib1){
+        printf ("carta 1 - (%s) venceu \n " , estado  ) ;
+    } else {
+        printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    }
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+
+    printf (" carta 1 - %s : Turistico  : %.0f \n " , estado , turistico);
+    printf (" carta 2 - %s : Turistico  : %.0f \n " , estado1 , turistico1);
+
+    if (turistico > turistico1){
+        printf ("carta 1 - (%s) venceu \n " , estado  ) ;
+    } else {
+        printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    }
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+
+    printf (" carta 1 - %s : Densidade Populacional : %.3f \n " , estado , densidade);
+    printf (" carta 2 - %s : Densidade Populacional   : %.3f \n " , estado1 , densidade1);
+
+    
+   
+    if ( densidade < densidade1){
+        printf ("carta 1 - (%s) venceu \n " , estado  ) ;
+    } else {
+        printf ("Carta 2 - (%s) venceu \n  " , estado1 );
+    }
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+
+    printf (" carta 1 - %s : Pib Percapita : %.3f \n " , estado , percapita );
+    printf (" carta 2 - %s : Pib Percapita : %.3f \n " , estado1 , percapita1);
 
    
+    if (percapita > percapita1){
+        printf ("carta 1 - (%s) venceu \n " , estado  ) ;
+    } else {
+        printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    }
 
+
+    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+
+    printf (" carta 1 - %s : Super Poder : %.3f \n " , estado , superpoder);
+    printf (" carta 2 - %s : Super Poder : %.3f \n " , estado1 , superpoder1);
+   
+    if (superpoder > superpoder1){
+        printf ("carta 1 - (%s) venceu \n " , estado  ) ;
+    } else {
+        printf ("Carta 2 - (%s) venceu \n  " , estado1 );
+    }
 return 0;
 
 }
