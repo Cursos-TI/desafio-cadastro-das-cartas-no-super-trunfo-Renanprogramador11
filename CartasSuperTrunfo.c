@@ -8,7 +8,7 @@
 
 int main() {
        
-    int   codigo , carta = 01 ;                         // declaração de toda as variaveis do codigo 
+    int   codigo , carta = 01 , escolhaCarta ;                         // declaração de toda as variaveis do codigo 
     float pib ,area , populacao, turistico ;
     char estado [100] , cidade [100]  ;
     float densidade , percapita ;
@@ -103,7 +103,7 @@ int main() {
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
-    superpoder = (int) populacao + area + turistico + pib , ( densidade /densidade );   // calculo do  super poder usando a conversao direta 
+    superpoder = (int) populacao + area + turistico + pib , ( densidade /densidade );    // calculo do  super poder usando a conversao direta 
 
     printf("Super poder carta 1 : %d \n " , superpoder );
 
@@ -119,17 +119,57 @@ int main() {
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n ");
 
+    printf (" ### Comparação da Carta ###\n ");
+    printf("Esclha uma carta \n ");
+    printf ("1. População \n") ;
+    printf ("2. Area \n") ;
+    printf ("3. Pib \n") ;
+    printf ("4. Pontos turisticos \n") ;
+    printf ("5. Densidade Populacional \n") ;
+    printf ("6. Pib percapta \n") ;
+    printf ("7. Super Poder \n") ;
+    scanf ("%d" ,&escolhaCarta);
 
+    switch (escolhaCarta)
+    {
+    case 1 :
+        printf("Carta Escolhida : Populção ") ;
+    break;
+    case 2 :
+        printf("Carta Escolhida : Area ") ;
+    break;
+    case 3 :
+        printf("Carta Escolhida : Pib ") ;
+    break;
+    case 4 :
+        printf("Carta Escolhida : Pntos Turisticos ") ;
+    break;
+    case 5 :
+        printf("Carta Escolhida : Densidade Populacional ") ;
+    break;
+    case 6 :
+        printf("Carta Escolhida : Pib Percapta ") ;
+    break;
+    case 7 :
+        printf("Carta Escolhida : Super Poder ") ;
+    break;
+
+    default:
+      printf("Opção Invalida") ;
+        break;
+    }
     printf (" carta 1 - %s : População : %.3f \n " , estado , populacao);         // comprarçao de todas as cartas diretamente no codigo sem escolha do usuarios
     printf (" carta 2 - %s : População : %.3f \n " , estado1 , populacao1);
 
      if (populacao > populacao1){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
-    } else {
+    } else if (populacao < populacao1) {
         printf (" Carta 2 - (%s) venceu \n " , estado1 );
+    } else{
+        printf (" Houve um empate ");
     }
 
-    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
     
 
      printf (" carta 1 - %s : Area : %.3f \n " , estado , area);
@@ -138,9 +178,13 @@ int main() {
     
     if (area > area1){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
-    } else {
+        } else if (area < area1){
         printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    } else
+    {
+        printf (" Houve um empate\n");
     }
+    
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
 
@@ -149,9 +193,13 @@ int main() {
 
     if (pib > pib1){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
-    } else {
+    } else if (pib > pib1) {
         printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    } else
+    {
+        printf (" Houve um empate\n");
     }
+    
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
 
@@ -200,6 +248,7 @@ int main() {
     } else {
         printf ("Carta 2 - (%s) venceu \n  " , estado1 );
     }
+
 return 0;
 
 }
