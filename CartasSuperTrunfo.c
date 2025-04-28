@@ -161,7 +161,7 @@ int main() {
     printf (" carta 1 - %s : População : %.3f \n " , estado , populacao);         // comprarçao de todas as cartas diretamente no codigo sem escolha do usuarios
     printf (" carta 2 - %s : População : %.3f \n " , estado1 , populacao1);
 
-     if (populacao > populacao1){
+     if (populacao > populacao1 , (escolhaCarta == 1)){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
     } else if (populacao < populacao1) {
         printf (" Carta 2 - (%s) venceu \n " , estado1 );
@@ -208,8 +208,10 @@ int main() {
 
     if (turistico > turistico1){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
-    } else {
+    } else if (turistico < turistico1 ) {
         printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    } else {
+        printf (" Houve um empate \n " );
     }
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
@@ -221,8 +223,10 @@ int main() {
    
     if ( densidade < densidade1){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
-    } else {
+    } else if (densidade > densidade1) {
         printf ("Carta 2 - (%s) venceu \n  " , estado1 );
+    } else {
+        printf (" Houve um empate \n " );
     }
 
     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
@@ -233,21 +237,25 @@ int main() {
    
     if (percapita > percapita1){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
-    } else {
+    } else if (percapita < percapita1) {
         printf ("Carta 2 - (%s) venceu \n " , estado1 );
+    }  else{
+        printf (" Houve um empate \n " );
     }
-
-
-    printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
+    
+     printf (" ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨\n "); 
 
     printf (" carta 1 - %s : Super Poder : %.3f \n " , estado , superpoder);
     printf (" carta 2 - %s : Super Poder : %.3f \n " , estado1 , superpoder1);
    
     if (superpoder > superpoder1){
         printf ("carta 1 - (%s) venceu \n " , estado  ) ;
-    } else {
+    } else if (superpoder < superpoder1) {
         printf ("Carta 2 - (%s) venceu \n  " , estado1 );
+    } else {
+        printf (" Houve um empate \n " );
     }
+
 
 return 0;
 
