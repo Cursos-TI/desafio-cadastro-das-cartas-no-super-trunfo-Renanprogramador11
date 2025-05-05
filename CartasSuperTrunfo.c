@@ -8,7 +8,7 @@
 
 int main() {
        
-    int   codigo , carta = 01 , escolhaCarta ;                         // declaração de toda as variaveis do codigo 
+    int   codigo , carta = 01 , escolhaCarta ,comparacao , comparacao1 , resultado , resultado1 ;                         // declaração de toda as variaveis do codigo 
     float pib ,area , populacao, turistico ;
     char estado [100] , cidade [100]  ;
     float densidade , percapita ;
@@ -133,7 +133,7 @@ int main() {
     switch (escolhaCarta)
     {
     case 1 :
-        printf("Carta Escolhida : Populção\n ") ;
+       printf("Carta Escolhida : Populção\n ") ;
 
     printf (" carta 1 - %s : População : %.3f \n " , estado , populacao);         // comprarçao de todas as cartas diretamente no codigo sem escolha do usuarios
     printf (" carta 2 - %s : População : %.3f \n " , estado1 , populacao1);
@@ -154,11 +154,11 @@ int main() {
         printf (" carta 2 - %s  : Area : %.3f \n " , estado1 , area1);
     
         
-        if (area > area1){
+       if (area > area1){
             printf ("carta 1 - (%s) venceu \n " , estado  ) ;
             } else if (area < area1){
             printf ("Carta 2 - (%s) venceu \n " , estado1 );
-        } else
+       } else
         {
             printf (" Houve um empate\n");
         }
@@ -176,7 +176,7 @@ int main() {
         printf ("Carta 2 - (%s) venceu \n " , estado1 );
     } else
     {
-        printf (" Houve um empate\n");
+    printf (" Houve um empate\n");
     }
     break;
     case 4 :
@@ -196,7 +196,7 @@ int main() {
     case 5 :
         printf("Carta Escolhida : Densidade Populacional\n ") ;
 
-        printf (" carta 1 - %s : Densidade Populacional : %.3f \n " , estado , densidade);
+      printf (" carta 1 - %s : Densidade Populacional : %.3f \n " , estado , densidade);
         printf (" carta 2 - %s : Densidade Populacional   : %.3f \n " , estado1 , densidade1);
     
         
@@ -205,7 +205,7 @@ int main() {
             printf ("carta 1 - (%s) venceu \n " , estado  ) ;
         } else if (densidade > densidade1) {
             printf ("Carta 2 - (%s) venceu \n  " , estado1 );
-        } else {
+       } else {
             printf (" Houve um empate \n " );
         }
     break;
@@ -213,7 +213,7 @@ int main() {
         printf("Carta Escolhida : Pib Percapta\n ") ;
 
         printf (" carta 1 - %s : Pib Percapita : %.3f \n " , estado , percapita );
-    printf (" carta 2 - %s : Pib Percapita : %.3f \n " , estado1 , percapita1);
+     printf (" carta 2 - %s : Pib Percapita : %.3f \n " , estado1 , percapita1);
 
    
     if (percapita > percapita1){
@@ -237,12 +237,75 @@ int main() {
     } else {
         printf (" Houve um empate \n " );
     }
-    break;
+     break;
 
     default:
       printf("Opção Invalida") ;
         break;
     }
+
+
+printf ("Escolha o primeiro carta \n ");
+printf("1. População \n");
+printf("2. Area \n");
+scanf("%d" , &comparacao) ;
+
+switch (comparacao)
+{
+case 1:
+    printf("Você escolheu População\n ");
+    resultado = populacao > populacao1 ? 1 : 0 ;
+    break;
+case 2:
+    printf("Você escolheu População\n ");
+    resultado = area > area1 ? 1 : 0 ;
+    break;    
+
+default:
+ printf("Opção ivalida \n ");
+
+ break;
+
+
+ printf ("Escolha o primeiro carta \n ");
+printf("1. População \n");
+printf("2. Area \n");
+scanf("%d" , &comparacao1) ;
+
+if (comparacao == comparacao1)
+{
+   printf("Voce escolheu a mesma carta\n ");
+} else {
+    switch (comparacao1)
+{
+case 1:
+    printf("Você escolheu População\n ");
+    resultado = populacao > populacao1 ? 1 : 0 ;
+    break;
+case 2:
+    printf("Você escolheu População\n ");
+    resultado = area > area1 ? 1 : 0 ;
+    break;    
+
+default:
+ printf("Opção ivalida \n ");
+
+ break;
+
+ if (comparacao && comparacao1)
+ {
+    printf("Parabens venceu \n ");
+ } else if (comparacao != comparacao1){
+    printf(" Empate \n ");
+ } else {
+    printf("Voce peerdeu \n ");
+ }
+ 
+
+}
+
+
+
 
 return 0;
 
